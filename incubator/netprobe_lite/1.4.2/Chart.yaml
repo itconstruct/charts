@@ -34,7 +34,7 @@ maintainers:
   - name: TrueCharts
     email: info@truecharts.org
     url: https://truecharts.org
-name: netprobe
+name: netprobe-lite
 sources:
   - https://github.com/plaintextpackets/netprobe_lite
   - https://hub.docker.com/r/plaintextpackets/netprobe
