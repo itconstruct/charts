@@ -1,4 +1,7 @@
-# Include{groups}
+groups:
+  - name: App Configuration
+    description: Configure the Netprobe application
+
 portals:
   open:
 # Include{portalLink}
