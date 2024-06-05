@@ -3,7 +3,13 @@ groups:
     description: Configure the Netprobe application
 
 portals:
-  open:
+  web_portal:
+    host:
+      host: "{{ .Release.Name }}"
+      paths:
+        - path: /
+          service: web
+          port: 80
 # Include{portalLink}
 questions:
 # Include{global}
