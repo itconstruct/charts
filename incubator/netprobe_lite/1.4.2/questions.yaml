@@ -18,9 +18,10 @@ questions:
     schema:
       additional_attrs: true
       type: dict
-      attrs: []  # Changed to an empty array
+      attrs: []
 
   - variable: service
+    group: App Configuration  # Added the 'group' key here
     label: Main Service
     description: The primary service on which the healthcheck runs, often the webUI
     schema:
@@ -47,7 +48,7 @@ questions:
     schema:
       additional_attrs: true
       type: dict
-      attrs: []  # Changed to an empty array
+      attrs: []
 
   - variable: grafana_data
     label: Grafana Data Storage
@@ -55,14 +56,14 @@ questions:
     schema:
       additional_attrs: true
       type: dict
-      attrs: []  # Changed to an empty array
+      attrs: []
 
   - variable: ingress
     label: Main Ingress
     schema:
       additional_attrs: true
       type: dict
-      attrs: []  # Changed to an empty array
+      attrs: []
 
 # Include{securityContextRoot}
 
