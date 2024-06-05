@@ -1,22 +1,30 @@
 {
-  "entries": {
-    "1.4.2": {
+  "1.4.2": {
+    "app_metadata": {
+      "capabilities": []
+    },
+    "chart_metadata": {
       "annotations": {
+        "truecharts.org/SCALE-documentation": {
+          "website": "https://github.com/plaintextpackets/netprobe_lite#readme"
+        },
         "truecharts.org/SCALE-metadata": {
-          "type": "SCALE-dockerhub",
           "repository": "plaintextpackets/netprobe_lite",
-          "tag": "1.4.2"
+          "tag": "1.4.2",
+          "type": "SCALE-dockerhub"
         },
         "truecharts.org/SCALE-support": {
           "issues": "https://github.com/plaintextpackets/netprobe_lite/issues",
           "source": "https://github.com/plaintextpackets/netprobe_lite"
-        },
-        "truecharts.org/SCALE-documentation": {
-          "website": "https://github.com/plaintextpackets/netprobe_lite#readme"
         }
-      },
-      "digest": "sha256:abcd1234efgh5678ijkl9012mnop3456qrst7890uvwx",
-      "deprecated": false
-    }
+      }
+    },
+    "healthy": true,
+    "healthy_error": null,
+    "human_version": "1.4.2",
+    "location": "/incubator/netprobe_lite",
+    "required_features": [],
+    "supported": true,
+    "version": "1.4.2"
   }
 }
