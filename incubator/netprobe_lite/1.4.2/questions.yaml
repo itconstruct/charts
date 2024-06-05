@@ -18,66 +18,53 @@ questions:
     schema:
       additional_attrs: true
       type: dict
+      attrs: []  # Changed to an empty array
+
+  - variable: service
+    label: Main Service
+    description: The primary service on which the healthcheck runs, often the webUI
+    schema:
+      additional_attrs: true
+      type: dict
       attrs:
-        - variable: module
-          label: Module
-          schema:
-            type: string
-            default: NETPROBE
-            enum:
-              - value: NETPROBE
-                description: Netprobe
-              - value: PRESENTATION
-                description: Presentation
-
-        - variable: service
-          label: Main Service
-          description: The primary service on which the healthcheck runs, often the webUI
+        - variable: service_port
+          label: Main Service Port Configuration
           schema:
             additional_attrs: true
             type: dict
             attrs:
-              - variable: service_port
-                label: Main Service Port Configuration
+              - variable: port
+                label: Port
+                description: This port exposes the container port on the service
                 schema:
-                  additional_attrs: true
-                  type: dict
-                  attrs:
-                    - variable: port
-                      label: Port
-                      description: This port exposes the container port on the service
-                      schema:
-                        type: int
-                        default: 3001
-                        required: true
+                  type: int
+                  default: 3001
+                  required: true
 
-        - variable: prometheus_data
-          label: Prometheus Data Storage
-          description: Stores the Prometheus data.
-          schema:
-            additional_attrs: true
-            type: dict
-            attrs:
-              # Include{persistenceBasic}
+  - variable: prometheus_data
+    label: Prometheus Data Storage
+    description: Stores the Prometheus data.
+    schema:
+      additional_attrs: true
+      type: dict
+      attrs: []  # Changed to an empty array
 
-        - variable: grafana_data
-          label: Grafana Data Storage
-          description: Stores the Grafana data.
-          schema:
-            additional_attrs: true
-            type: dict
-            attrs:
-              # Include{persistenceBasic}
+  - variable: grafana_data
+    label: Grafana Data Storage
+    description: Stores the Grafana data.
+    schema:
+      additional_attrs: true
+      type: dict
+      attrs: []  # Changed to an empty array
 
-        - variable: ingress
-          label: Main Ingress
-          schema:
-            additional_attrs: true
-            type: dict
-            attrs:
-              # Include{ingressDefault}
+  - variable: ingress
+    label: Main Ingress
+    schema:
+      additional_attrs: true
+      type: dict
+      attrs: []  # Changed to an empty array
 
-        # Include{securityContextRoot}
+# Include{securityContextRoot}
 
 # Include{resources}
 # Include{advanced}
