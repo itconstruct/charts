@@ -22,8 +22,14 @@
     "healthy": true,
     "healthy_error": null,
     "human_version": "1.4.2",
+    "last_update": "2023-06-05 09:06:00",
     "location": "/incubator/netprobe_lite",
     "required_features": [],
+    "schema": {
+      "groups": [],
+      "portals": {},
+      "questions": []
+    },
     "supported": true,
     "version": "1.4.2"
   }
