@@ -1,6 +1,14 @@
 groups:
-  - name: App Configuration
-    description: Configure the Netprobe application
+  - name: "Netprobe Lite"
+    description: "Configure the Netprobe Lite application"
+  - name: "Ingress"
+    description: "Ingress configuration"
+  - name: "Storage"
+    description: "Configure storage for the application"
+  - name: "Resources and Containers"
+    description: "Configure resource requests and containers"
+  - name: "Workload"
+    description: "Configure workload settings"
 
 portals:
   web_portal:
@@ -13,53 +21,56 @@ portals:
 
 questions:
   - variable: netprobe
-    group: App Configuration
-    label: Netprobe Configuration
+    group: "Netprobe Lite"
+    label: "Netprobe Configuration"
     schema:
       additional_attrs: true
       type: dict
       attrs: []
 
   - variable: service
-    group: App Configuration  # Added the 'group' key here
-    label: Main Service
-    description: The primary service on which the healthcheck runs, often the webUI
+    group: "Netprobe Lite"
+    label: "Main Service"
+    description: "The primary service on which the healthcheck runs, often the webUI"
     schema:
       additional_attrs: true
       type: dict
       attrs:
         - variable: service_port
-          label: Main Service Port Configuration
+          label: "Main Service Port Configuration"
           schema:
             additional_attrs: true
             type: dict
             attrs:
               - variable: port
-                label: Port
-                description: This port exposes the container port on the service
+                label: "Port"
+                description: "This port exposes the container port on the service"
                 schema:
                   type: int
                   default: 3001
                   required: true
 
   - variable: prometheus_data
-    label: Prometheus Data Storage
-    description: Stores the Prometheus data.
+    group: "Storage"
+    label: "Prometheus Data Storage"
+    description: "Stores the Prometheus data."
     schema:
       additional_attrs: true
       type: dict
       attrs: []
 
   - variable: grafana_data
-    label: Grafana Data Storage
-    description: Stores the Grafana data.
+    group: "Storage"
+    label: "Grafana Data Storage"
+    description: "Stores the Grafana data."
     schema:
       additional_attrs: true
       type: dict
       attrs: []
 
   - variable: ingress
-    label: Main Ingress
+    group: "Ingress"
+    label: "Main Ingress"
     schema:
       additional_attrs: true
       type: dict
