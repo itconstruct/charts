@@ -1,0 +1,9 @@
+dependencies:
+- name: common
+  repository: oci://tccr.io/truecharts
+  version: 23.0.0
+- name: redis
+  repository: oci://tccr.io/truecharts
+  version: 14.0.5
+digest: sha256:4c5bf3781e9d7850e708f4bec28811b97c7363a8165b1637bc2671e5e34f12e8
+generated: "2024-05-16T20:25:50.9735521+10:00"

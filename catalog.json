@@ -1,0 +1,38 @@
+{
+    "charts": {},
+    "test": {},
+
+    "incubator": {
+        "netprobe-lite": {
+            "app_readme": "<p>Authelia is a Single Sign-On Multi-Factor portal for web apps</p>\n<p>This App is supplied by TrueCharts, for more information visit the manual: <a href=\"https://truecharts.org/charts/premium/authelia\">https://truecharts.org/charts/premium/authelia</a></p>\n<hr />\n<p>TrueCharts can only exist due to the incredible effort of our staff.\nPlease consider making a <a href=\"https://truecharts.org/sponsor\">donation</a> or contributing back to the project any way you can!</p>",
+            "categories": [
+                "security"
+            ],
+            "description": "Netprobe Lite",
+            "healthy": true,
+            "healthy_error": null,
+            "home": "https://github.com/itconstruct/charts/incubator/netprobe-lite",
+            "location": "/home/runner/_work/catalog/catalog/incubator/netprobe-lite",
+            "latest_version": "15.13.4",
+            "latest_app_version": "4.38.8",
+            "latest_human_version": "4.38.8_24.1.4",
+            "last_update": "2024-05-29 12:35:14",
+            "name": "netprobe-lite",
+            "recommended": false,
+            "title": "Netprobe",
+            "maintainers": [
+                {
+                    "name": "TrueCharts",
+                    "email": "info@truecharts.org",
+                    "url": "https://truecharts.org"
+                }
+            ],
+            "tags": [],
+            "screenshots": [],
+            "sources": [
+                "https://github.com/itconstruct/charts/incubator/netprobe-lite",
+            ],
+            "icon_url": "https://github.com/itconstruct/charts/incubator/netprobe-lite/icon-small.webp"
+        }
+    }
+}

@@ -1,0 +1,99 @@
+image:
+  repository: plaintextpackets/netprobe
+  tag: latest
+  pullPolicy: IfNotPresent
+
+netprobe:
+  enabled: true
+  image:
+    repository: plaintextpackets/netprobe
+    tag: latest
+    pullPolicy: IfNotPresent
+  volumes:
+    - name: netprobe-code
+      mountPath: /netprobe_lite
+  environment:
+    MODULE: NETPROBE
+
+presentation:
+  enabled: true
+  image:
+    repository: plaintextpackets/netprobe
+    tag: latest
+    pullPolicy: IfNotPresent
+  volumes:
+    - name: netprobe-code
+      mountPath: /netprobe_lite
+  environment:
+    MODULE: PRESENTATION
+
+prometheus:
+  enabled: true
+  image:
+    repository: prom/prometheus
+    tag: latest
+    pullPolicy: IfNotPresent
+  volumes:
+    - name: prometheus-config
+      mountPath: /etc/prometheus/prometheus.yml
+      subPath: prometheus.yml
+    - name: prometheus-data
+      mountPath: /prometheus
+
+grafana:
+  enabled: true
+  image:
+    repository: grafana/grafana-enterprise
+    tag: latest
+    pullPolicy: IfNotPresent
+  ports:
+    - name: http
+      containerPort: 3000
+      servicePort: 3001
+  volumes:
+    - name: grafana-datasources
+      mountPath: /etc/grafana/provisioning/datasources/automatic.yml
+      subPath: automatic.yml
+    - name: grafana-dashboards
+      mountPath: /etc/grafana/provisioning/dashboards/main.yml
+      subPath: main.yml
+    - name: grafana-netprobe
+      mountPath: /var/lib/grafana/dashboards/netprobe.json
+      subPath: netprobe.json
+    - name: grafana-data
+      mountPath: /var/lib/grafana
+
+securityContext:
+  container:
+    readOnlyRootFilesystem: false
+    runAsNonRoot: false
+    runAsUser: 0
+    runAsGroup: 0
+
+service:
+  main:
+    enabled: true
+    type: ClusterIP
+    ports:
+      http:
+        enabled: true
+        port: 3001
+
+persistence:
+  prometheus_data:
+    enabled: true
+    type: persistentVolumeClaim
+    mountPath: /prometheus
+  grafana_data:
+    enabled: true
+    type: persistentVolumeClaim
+    mountPath: /var/lib/grafana
+
+redis:
+  enabled: true
+  includeCommon: true
+  redisUsername: default
+
+portal:
+  open:
+    enabled: true
