@@ -29,7 +29,7 @@ home: https://itconstruct.com.au/coding_projects/
 icon: https://itconstruct.com.au/coding_projects/netprobe_lite.webp
 keywords:
   - photos
-kubeVersion: "=1.24.0-0"
+kubeVersion: "=1.26.6-0"
 maintainers:
   - name: TrueCharts
     email: info@truecharts.org
