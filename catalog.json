@@ -3,21 +3,21 @@
     "test": {},
 
     "incubator": {
-        "netprobe-lite": {
-            "app_readme": "<p>Authelia is a Single Sign-On Multi-Factor portal for web apps</p>\n<p>This App is supplied by TrueCharts, for more information visit the manual: <a href=\"https://truecharts.org/charts/premium/authelia\">https://truecharts.org/charts/premium/authelia</a></p>\n<hr />\n<p>TrueCharts can only exist due to the incredible effort of our staff.\nPlease consider making a <a href=\"https://truecharts.org/sponsor\">donation</a> or contributing back to the project any way you can!</p>",
+        "netprobe_lite": {
+            "app_readme": "<p>Simple and effective tool for measuring ISP performance at home. \n The tool measures several performance metrics including packet loss, latency, jitter, and DNS performance. \n It also has an optional speed test to measure bandwidth. Netprobe aggregates these metrics into a common score, which you can use to monitor overall health of your internet connection.</p>",
             "categories": [
                 "security"
             ],
             "description": "Netprobe Lite",
             "healthy": true,
             "healthy_error": null,
-            "home": "https://github.com/itconstruct/charts/incubator/netprobe-lite",
-            "location": "/home/runner/_work/catalog/catalog/incubator/netprobe-lite",
+            "home": "https://github.com/itconstruct/charts/incubator/netprobe_lite",
+            "location": "/home/runner/_work/catalog/catalog/incubator/netprobe_lite",
             "latest_version": "1.4.2",
             "latest_app_version": "latest",
             "latest_human_version": "latest_1.4.2",
             "last_update": "2024-05-22 12:35:14",
-            "name": "netprobe-lite",
+            "name": "netprobe_lite",
             "recommended": false,
             "title": "Netprobe",
             "maintainers": [
@@ -30,9 +30,9 @@
             "tags": [],
             "screenshots": [],
             "sources": [
-                "https://github.com/itconstruct/charts/incubator/netprobe-lite"
+                "https://github.com/itconstruct/charts/incubator/netprobe_lite"
             ],
-            "icon_url": "https://github.com/itconstruct/charts/incubator/netprobe-lite/icon-small.webp"
+            "icon_url": "https://github.com/itconstruct/charts/incubator/netprobe_lite/icon-small.webp"
         }
     }
 }
